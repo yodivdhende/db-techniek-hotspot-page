@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Lispanne Capri hotspot inlogscherm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+</head>
+<body style="text-align:center; background-image: url('/img/back.bmp');">
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+    <table bgcolor="White" style="border: medium solid #808080; text-align:center">
+        <tr align=center>
+            <td>
+                <img alt="Lispanne Capri" src="img/logo.jpg" onmouseover='javascript:this.style.cursor="hand";' onclick='javascript:window.location.href="http://www.campingszwaenepoel.be/"' style="vertical-align: bottom; border-collapse: collapse;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br />
+                <a href="$(link-login-only)?target=%2F&amp;dst=$(link-orig-esc)" style="color:#000FFF;">ENGLISH</a>&nbsp;&nbsp;&nbsp;
+                <a href="$(link-login-only)?target=nl&amp;dst=$(link-orig-esc)" style="color:#000FFF;">NEDERLANDS</a>&nbsp;&nbsp;&nbsp;
+                <a href="$(link-login-only)?target=fr&amp;dst=$(link-orig-esc)" style="color:#000FFF;">FRANCAIS</a>&nbsp;&nbsp;&nbsp;
+                <a href="$(link-login-only)?target=de&amp;dst=$(link-orig-esc)" style="color:#000FFF;">DEUTSCH</a>
+                <br />&nbsp;
+            </td>
+        </tr>
+        <tr>
+	<td align="center" valign="middle">
+		<div class="notice" style="color: #616161; font-size: 14px">Gelieve in te loggen op de <b>Lispanne Capri</b> hotspot-service<br /></div><br />
+		<table width="240" height="120" style="border: 1px solid #cccccc; padding: 0px;" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center" valign="center" height="50" colspan="2">
+				    <br />
+					<form name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+
+							<table width="100" style="background-color: #ffffff">
+								<tr><td align="right">gebruikersnaam</td>
+										<td><input style="width: 80px" name="username" type="text" value="$(username)"/></td>
+								</tr>
+								<tr><td align="right">paswoord</td>
+										<td><input style="width: 80px" name="password" type="password"/></td>
+								</tr>
+								<tr><td>&nbsp;</td>
+										<td><input type="submit" value="OK" /></td>
+								</tr>
+							</table>
+					</form>
+				</td>
+			</tr>
+		</table>
+
+
+        <img alt="olloc.be" src="img/olloc.jpg" onmouseover='javascript:this.style.cursor="hand";' onclick='javascript:window.location.href="http://www.olloc.be"' style="vertical-align: bottom; border-collapse: collapse;" />
+	    <br /><br /><div style="color: #000000; font-size: 14px">Powered by olloc.web &copy; 2007-2013 www.olloc.be<br /><br />
+
+     </div>
+	$(if error)<br /><div style="color: red; font-size: 12px; font-weight: bold;">$(error)</div>$(endif)
+	</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+</body>
+</html>
