@@ -5,9 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="-1" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/default-style.css" />
     <script type="text/javascript" src="swfobject.js"></script>
   </head>
-  <body style="text-align: center; background-image: url('/img/back.bmp')">
+  <body>
+    <!--
     $(if chap-id)
     <form name="sendin" action="$(link-login-only)" method="post">
       <input type="hidden" name="username" />
@@ -17,19 +20,21 @@
     </form>
 
     <script type="text/javascript" src="/md5.js"></script>
-    <script type="text/javascript">
-      <!--
-      function doLogin() {
-        document.sendin.username.value = document.login.username.value;
-        document.sendin.password.value = hexMD5(
-          '$(chap-id)' + document.login.password.value + '$(chap-challenge)'
-        );
-        document.sendin.submit();
-        return false;
-      }
-      //-->
-    </script>
     $(endif)
+		-->
+    <header>
+      <div class="gradiant"></div>
+      <img src="assets/img/logo.png" alt="logo gecco" />
+    </header>
+    <article>
+      <ul class="languages">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </article>
+
     <table
       style="
         border: medium solid #808080;
@@ -37,17 +42,6 @@
         background-color: white;
       "
     >
-      <tr align="center">
-        <td>
-          <img
-            alt="Lispanne Capri"
-            src="img/logo.jpg"
-            onmouseover='javascript:this.style.cursor="hand";'
-            onclick='javascript:window.location.href="http://www.campingszwaenepoel.be/"'
-            style="vertical-align: bottom; border-collapse: collapse"
-          />
-        </td>
-      </tr>
       <tr>
         <td>
           <br />
@@ -147,13 +141,26 @@
         </td>
       </tr>
     </table>
-    <br />
-    <br />
+
+    <footer>
+      <div class="site">
+        <span class="red">olloc</span>
+        <span class="gray">.be</span>
+      </div>
+      <div class="background-img">
+        <img
+          src="./assets/img/olloc-background.png"
+          alt="music note, globe, a clock"
+        />
+      </div>
+      <div class="gray-block"></div>
+      <div class="red-block">
+        <span>hard & software op maat</span>
+      </div>
+    </footer>
 
     <script type="text/javascript">
-      <!--
       document.login.username.focus();
-      //-->
     </script>
   </body>
 </html>
