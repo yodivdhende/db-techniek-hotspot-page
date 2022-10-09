@@ -1,16 +1,23 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Lispanne Capri hotspot login</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="expires" content="-1" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/default-style.css" />
-    <script type="text/javascript" src="swfobject.js"></script>
-  </head>
-  <body>
-    <!--
+
+<head>
+  <title>Lispanne Capri hotspot login</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/default-style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script type="text/javascript" src="swfobject.js"></script>
+</head>
+
+<body>
+  <!--
     $(if chap-id)
     <form name="sendin" action="$(link-login-only)" method="post">
       <input type="hidden" name="username" />
@@ -22,145 +29,62 @@
     <script type="text/javascript" src="/md5.js"></script>
     $(endif)
 		-->
-    <header>
-      <div class="gradiant"></div>
+  <header>
+    <div class="gradiant"></div>
+  </header>
+  <article>
+    <section class="login">
       <img src="assets/img/logo.png" alt="logo gecco" />
-    </header>
-    <article>
-      <ul class="languages">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <div class="login-header">
+        Please log on to use the <b>Gecco netwerk</b>
+      </div>
+      <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+        <lable>login</lable>
+        <input name="username" type="text" value="$(username)" />
+        <label>password</label>
+        <div class="pass">
+          <input name="password" type="password" />
+          <span class="material-symbols-outlined icon">
+            visibility_off
+          </span>
+          <span class="material-symbols-outlined icon" style="display: none;">
+            visibility
+          </span>
+        </div>
+        <input class="button" type="submit" value="OK" />
+      </form>
+      <div class="error">
+        $(if error)
+        <div class="error-tekst">
+          $(error)
+        </div>
+        $(endif)
+      </div>
+      <ul class="login-languages">
+        <li>🇬🇧</li>
+        <li>🇳🇱</li>
+        <li>🇫🇷</li>
+        <li>🇩🇪</li>
       </ul>
-    </article>
-
-    <table
-      style="
-        border: medium solid #808080;
-        text-align: center;
-        background-color: white;
-      "
-    >
-      <tr>
-        <td>
-          <br />
-          <a
-            href="$(link-login-only)?target=%2F&amp;dst=$(link-orig-esc)"
-            style="color: #000fff"
-            >ENGLISH</a
-          >&nbsp;&nbsp;&nbsp;
-          <a
-            href="$(link-login-only)?target=nl&amp;dst=$(link-orig-esc)"
-            style="color: #000fff"
-            >NEDERLANDS</a
-          >&nbsp;&nbsp;&nbsp;
-          <a
-            href="$(link-login-only)?target=fr&amp;dst=$(link-orig-esc)"
-            style="color: #000fff"
-            >FRANCAIS</a
-          >&nbsp;&nbsp;&nbsp;
-          <a
-            href="$(link-login-only)?target=de&amp;dst=$(link-orig-esc)"
-            style="color: #000fff"
-            >DEUTSCH</a
-          >
-          <br />&nbsp;
-        </td>
-      </tr>
-      <tr>
-        <td align="center" valign="middle">
-          <div class="notice" style="color: #616161; font-size: 14px"
-            >Please log on to use the <b>Lispanne Capri</b> hotspot service<br /></div
-          ><br />
-          <table
-            width="240"
-            style="border: 1px solid #cccccc; padding: 0px"
-            cellpadding="0"
-            cellspacing="0"
-          >
-            <tr>
-              <td align="center" valign="center" height="50" colspan="2">
-                <br />
-                <form
-                  name="login"
-                  action="$(link-login-only)"
-                  method="post"
-                  $(if
-                  chap-id)
-                  onSubmit="return doLogin()"
-                  $(endif)
-                >
-                  <input type="hidden" name="dst" value="$(link-orig)" />
-                  <input type="hidden" name="popup" value="true" />
-
-                  <table width="100" style="background-color: #ffffff">
-                    <tr
-                      ><td align="right">login</td>
-                      <td
-                        ><input
-                          style="width: 80px"
-                          name="username"
-                          type="text"
-                          value="$(username)"
-                      /></td>
-                    </tr>
-                    <tr
-                      ><td align="right">password</td>
-                      <td
-                        ><input
-                          style="width: 80px"
-                          name="password"
-                          type="password"
-                      /></td>
-                    </tr>
-                    <tr
-                      ><td>&nbsp;</td>
-                      <td><input type="submit" value="OK" /></td>
-                    </tr>
-                  </table>
-                </form>
-              </td>
-            </tr>
-          </table>
-
-          <img
-            alt="olloc.be"
-            src="img/olloc.jpg"
-            onmouseover='javascript:this.style.cursor="hand";'
-            onclick='javascript:window.location.href="http://www.olloc.be"'
-            style="vertical-align: bottom; border-collapse: collapse"
-          />
-          <br /><br /><div style="color: #000000; font-size: 14px"
-            >Powered by olloc.web &copy; 2007-2013 www.olloc.be<br /><br />
-          </div>
-          $(if error)<br /><div
-            style="color: red; font-size: 12px; font-weight: bold"
-            >$(error)</div
-          >$(endif)
-        </td>
-      </tr>
-    </table>
-
-    <footer>
-      <div class="site">
-        <span class="red">olloc</span>
-        <span class="gray">.be</span>
+      <div class="login-footer">
+        Powered by olloc.web &copy; 2007-2013 <a href="www.olloc.be">www.olloc.be</a>
       </div>
-      <div class="background-img">
-        <img
-          src="./assets/img/olloc-background.png"
-          alt="music note, globe, a clock"
-        />
-      </div>
-      <div class="gray-block"></div>
-      <div class="red-block">
-        <span>hard & software op maat</span>
-      </div>
-    </footer>
+    </section>
+  </article>
+  <footer>
+    <div class="site" onclick="javascript:window.location.href='http://www.olloc.be'">
+      <span class="red">olloc</span>
+      <span class="gray">.be</span>
+    </div>
+    <div class="background-img">
+      <img src="./assets/img/olloc-background.png" alt="music note, globe, a clock" />
+    </div>
+    <div class="gray-block"></div>
+    <div class="red-block">
+      <span>hard & software op maat</span>
+    </div>
+  </footer>
+  <script src="./assets/js/login-script.js"></script>
+</body>
 
-    <script type="text/javascript">
-      document.login.username.focus();
-    </script>
-  </body>
 </html>
