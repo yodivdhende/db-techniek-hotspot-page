@@ -2,11 +2,11 @@
   --gray: darkgray;
   --red: red;
   --text-color:#616161 ;
-  --footer-height: 150px
+  --footer-height:100px;
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   color: var(--text-color);
@@ -16,8 +16,7 @@ body {
 
 header {
   width: 100%;
-  min-height: 400px;
-  max-height: 500px;
+  height: 30vh;
   position: relative;
   background-image: url(../img/header.jpg);
   background-repeat: no-repeat;
@@ -55,7 +54,6 @@ article {
   --login-width: 30vw;
   width: var(--login-width);
   min-width: 500px;
-  min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,24 +142,13 @@ article {
   box-shadow: inset 2px 2px 5px #ccc;
 }
 
-.login-footer {
-  margin:0.5em;
-  text-align: right;
-}
-
-.login-footer a {
-  color: var(--text-color);
-}
-
 .error {
   width: 100%;
-  display: none; 
-  /* TODO Remoge display */
 }
 
 .error-tekst {
   width: 100%;
-  margin: 1em;
+  margin: 1em 0;
   text-align: center;
   color: red;
   font-size: 20px;
@@ -171,43 +158,15 @@ article {
 footer {
   width: 100%;
   height: var(--footer-height);
-  display: grid;
   position: absolute;
   bottom: 0;
-  grid-template-columns: 1fr 1.05fr;
-}
-
-footer .site {
   display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  justify-content: flex-end;
-  padding-right: 1rem;
-  font-size: 2em;
-  font-weight: bold;
-  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-footer .site .red {
-  color: var(--red);
-}
-footer .site .gray {
-  color: var(--gray);
+footer img {
+  height: 100%;
 }
 
-footer .background-img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-footer .gray-block {
-  background-color: var(--gray);
-}
-
-footer .red-block {
-  padding: 1rem;
-  text-align: left;
-  color: white;
-  background-color: var(--red);
-}
