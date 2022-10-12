@@ -8,15 +8,18 @@
 
   article {
     position: relative;
+    width: 100%;
   }
 
   .login {
     width: 100%;
-    min-width: none;
+    min-width: 100%;
     filter: none;
   }
 
   footer {
+    height:7vh;
+    margin-bottom: 1rem;
     position: relative;
   }
 }
