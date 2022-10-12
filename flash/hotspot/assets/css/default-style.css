@@ -75,6 +75,7 @@ article {
   margin: 1rem;
   font-size: 1.3rem;
   text-align: center;
+  /*TODO add more padding left and right*/
 }
 
 .login form {
@@ -180,3 +181,6 @@ footer img {
   height: 100%;
 }
 
+.hide {
+  display: none !important;
+}

@@ -6,7 +6,7 @@
   <title>Lispanne Capri hotspot login</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="pragma" content="no-cache" />
-  <meta http-equiv="expires" content="-1" /> 
+  <meta http-equiv="expires" content="-1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/reset.css" />
   <link rel="stylesheet" href="assets/css/default-style.css" />
@@ -45,13 +45,15 @@
         <input name="username" type="text" value="$(username)" />
         <label><span id="login-password"></span></label>
         <div class="pass">
-          <input name="password" type="password" />
-          <span class="material-symbols-outlined icon">
-            visibility_off
-          </span>
-          <span class="material-symbols-outlined icon" style="display: none;">
-            visibility
-          </span>
+          <input id="pass" name="password" type="password" />
+          <div id="pass-toggle" onclick="togglePassword()">
+            <span id="pass-toggle-visibility-off" class="material-symbols-outlined icon">
+              visibility_off
+            </span>
+            <span id="pass-toggle-visibility-on" class="hide material-symbols-outlined icon ">
+              visibility
+            </span>
+          </div>
         </div>
         <input class="button" type="submit" value="OK" />
       </form>
