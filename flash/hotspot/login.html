@@ -38,12 +38,12 @@
     <section class="login">
       <img src="assets/img/logo.png" alt="logo gecco" />
       <div class="login-header">
-        Please log on to use the <b>Gecco netwerk</b>
+        <span id="greeting-text"></span>
       </div>
       <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
-        <lable>login</lable>
+        <lable><span id="login-label"></span></lable>
         <input name="username" type="text" value="$(username)" />
-        <label>password</label>
+        <label><span id="login-password"></span></label>
         <div class="pass">
           <input name="password" type="password" />
           <span class="material-symbols-outlined icon">
@@ -63,10 +63,10 @@
         $(endif)
       </div>
       <ul class="login-languages">
-        <li><img src="./assets/img/Flag_of_the_Netherlands.svg" /></li>
-        <li><img src="./assets/img/Flag_of_the_United_Kingdom.svg" /></li>
-        <li><img src="./assets/img/Flag_of_France.svg" /></li>
-        <li><img src="./assets/img/Flag_of_Germany.svg" /></li>
+        <li onclick="translateTo('nl')"><img src="./assets/img/Flag_of_the_Netherlands.svg" /></li>
+        <li onclick="translateTo('en')"><img src="./assets/img/Flag_of_the_United_Kingdom.svg" /></li>
+        <li onclick="translateTo('fr')"><img src="./assets/img/Flag_of_France.svg" /></li>
+        <li onclick="translateTo('de')"><img src="./assets/img/Flag_of_Germany.svg" /></li>
       </ul>
     </section>
   </article>
@@ -76,6 +76,7 @@
     </div>
     <img src="./assets/img/logo-dbtechniek.jpg" alt="logo of Db Techniek">
   </footer>
+  <script src="./assets/js/translations.js"></script>
   <script src="./assets/js/login-script.js"></script>
 </body>
 
