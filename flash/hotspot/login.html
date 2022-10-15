@@ -10,10 +10,6 @@
   <link rel="stylesheet" href="assets/css/reset.css" />
   <link rel="stylesheet" href="assets/css/default-style.css" />
   <link rel="stylesheet" href="assets/css/mobile-style.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <script type="text/javascript" src="swfobject.js"></script>
 </head>
 
@@ -46,12 +42,18 @@
         <div class="pass">
           <input id="pass" name="password" type="password" />
           <div id="pass-toggle" onclick="togglePassword()">
-            <span id="pass-toggle-visibility-off" class="material-symbols-outlined icon">
-              visibility_off
-            </span>
-            <span id="pass-toggle-visibility-on" class="hide material-symbols-outlined icon ">
-              visibility
-            </span>
+            <img
+              id="pass-toggle-visibility-off"
+              src="./assets/icons/visibility_off_FILL0_wght400_GRAD0_opsz48.svg"
+              alt="eye icon"
+              class="icon"
+            >
+            <img
+              id="pass-toggle-visibility-on"
+              src="./assets/icons/visibility_FILL0_wght400_GRAD0_opsz48.svg"
+              alt="eye icon crostedout"
+              class="icon hide"
+            >
           </div>
         </div>
         <input class="button" type="submit" value="OK" />
@@ -64,10 +66,10 @@
         $(endif)
       </div>
       <ul class="login-languages">
-        <li onclick="translateTo('nl')"><img src="./assets/img/Flag_of_the_Netherlands.svg" /></li>
-        <li onclick="translateTo('en')"><img src="./assets/img/Flag_of_the_United_Kingdom.svg" /></li>
-        <li onclick="translateTo('fr')"><img src="./assets/img/Flag_of_France.svg" /></li>
-        <li onclick="translateTo('de')"><img src="./assets/img/Flag_of_Germany.svg" /></li>
+        <li onclick="translateTo('nl')"><img src="./assets/icons/Flag_of_the_Netherlands.svg" /></li>
+        <li onclick="translateTo('en')"><img src="./assets/icons/Flag_of_the_United_Kingdom.svg" /></li>
+        <li onclick="translateTo('fr')"><img src="./assets/icons/Flag_of_France.svg" /></li>
+        <li onclick="translateTo('de')"><img src="./assets/icons/Flag_of_Germany.svg" /></li>
       </ul>
     </section>
   </article>
