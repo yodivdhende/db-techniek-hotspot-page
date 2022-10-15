@@ -18,7 +18,24 @@
   }
 
   footer {
-    height:7vh;
     position: relative;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .login{
+    height: 100vh;
+  }
+  footer {
+    width:auto;
+    height:auto;
+    margin:0;
+    padding: 1rem;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    background-color:white;
+  }
+  footer img {
+    height: 2.5rem;
   }
 }

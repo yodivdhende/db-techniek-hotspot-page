@@ -2,7 +2,6 @@
   --gray: darkgray;
   --red: red;
   --text-color:#616161 ;
-  --footer-height:80px;
 }
 
 body {
@@ -39,7 +38,7 @@ article {
   width: 100%;
   height: 100vh;
   position: absolute;
-  top:  calc(var(--footer-height) * -0.3);
+  top:  calc(3rem * -0.3);
   left: 0;
   display: flex;
   flex-direction: column;
@@ -169,7 +168,6 @@ article {
 
 footer {
   width: 100%;
-  height: var(--footer-height);
   margin-bottom: 1rem;
   position: absolute;
   bottom: 0;
@@ -180,7 +178,7 @@ footer {
 }
 
 footer img {
-  height: 100%;
+  height: 2rem;
 }
 
 .hide {
