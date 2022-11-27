@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <title>Gecco hotspot login</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -14,16 +15,16 @@
 </head>
 
 <body>
-    $(if chap-id)
-    <form name="sendin" action="$(link-login-only)" method="post">
-      <input type="hidden" name="username" />
-      <input type="hidden" name="password" />
-      <input type="hidden" name="dst" value="$(link-orig)" />
-      <input type="hidden" name="popup" value="true" />
-    </form>
+  $(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+  </form>
 
-    <script type="text/javascript" src="/md5.js"></script>
-    $(endif)
+  <script type="text/javascript" src="/md5.js"></script>
+  $(endif)
   <header>
     <div class="gradiant"></div>
   </header>
@@ -35,24 +36,18 @@
         <span id="greeting-text"></span>
       </div>
       <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
-        <lable><span id="login-label"></span></lable>
-        <input name="username" type="text" value="$(username)" />
-        <label><span id="login-password"></span></label>
-        <div class="pass">
-          <input id="pass" name="password" type="password" />
-          <div id="pass-toggle" onclick="togglePassword()">
-            <img
-              id="pass-toggle-visibility-off"
-              src="./assets/icons/visibility_off_FILL0_wght400_GRAD0_opsz48.svg"
-              alt="eye icon"
-              class="icon"
-            >
-            <img
-              id="pass-toggle-visibility-on"
-              src="./assets/icons/visibility_FILL0_wght400_GRAD0_opsz48.svg"
-              alt="eye icon crostedout"
-              class="icon hide"
-            >
+        <div class="hide">
+          <lable><span id="login-label"></span></lable>
+          <input name="username" type="text" value="Guest02" />
+          <label><span id="login-password"></span></label>
+          <div class="pass">
+            <input id="pass" name="password" type="password" value="pav01" />
+            <div id="pass-toggle" onclick="togglePassword()">
+              <img id="pass-toggle-visibility-off" src="./assets/icons/visibility_off_FILL0_wght400_GRAD0_opsz48.svg"
+                alt="eye icon" class="icon">
+              <img id="pass-toggle-visibility-on" src="./assets/icons/visibility_FILL0_wght400_GRAD0_opsz48.svg"
+                alt="eye icon crostedout" class="icon hide">
+            </div>
           </div>
         </div>
         <input class="button" type="submit" value="OK" />
